@@ -14,20 +14,21 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "bloc")
-public class Bloc {
+@Table(name = "foyer")
+public class Foyer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_bloc")
-    private Long idBloc;
-    @Column(name = "nom_bloc")
-    private String nomBloc;
-    @Column(name = "cap_bloc")
-    private Long capaciteBloc;
+    @Column(name = "id_foyer")
+    private Long idFoyer;
+    @Column(name = "nom_foyer")
+    private String nomFoyer;
+    @Column(name = "cap_foyer")
+    private Long capaciteF;
 
-    @ManyToOne
-    private Foyer foyer;
-    @OneToMany(mappedBy = "bloc",cascade = CascadeType.ALL)
-    private Set<Chambre> chambres;
+    @OneToMany(mappedBy = "foyer",cascade = CascadeType.ALL)
+    private Set<Bloc> blocs;
+    @OneToOne
+    private Universite universite;
+
 
 }
