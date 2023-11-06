@@ -1,6 +1,6 @@
 Spring:
  datasource:
-   url: jdbc:mysql://localhost:3306/springdb?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=truespring
+   url: jdbc:mysql://localhost:3306/springdb
    username : root
    password: root
  jpa:

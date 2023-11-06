@@ -21,7 +21,6 @@ public class Chambre {
     @Column(name = "type_chbr")
     @Enumerated(EnumType.STRING)
     private TypeChambre typeC;
-
     @ManyToOne
     private Bloc bloc;
     @OneToMany
